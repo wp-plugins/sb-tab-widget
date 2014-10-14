@@ -11,8 +11,6 @@ function sb_tab_widget_check_core() {
     return $sb_core_installed;
 }
 
-sb_tab_widget_check_core();
-
 function sb_tab_widget_activation() {
     if(!sb_tab_widget_check_core()) {
         wp_die(sprintf(__('You must install and activate plugin %1$s first! Click here to %2$s.', 'sb-tab-widget'), '<a href="https://wordpress.org/plugins/sb-core/">SB Core</a>', sprintf('<a href="%1$s">%2$s</a>', admin_url('plugins.php'), __('go back', 'sb-tab-widget'))));
@@ -20,6 +18,10 @@ function sb_tab_widget_activation() {
     do_action('sb_tab_widget_activation');
 }
 register_activation_hook(SB_TAB_WIDGET_FILE, 'sb_tab_widget_activation');
+
+if(!sb_tab_widget_check_core()) {
+    return;
+}
 
 function sb_tab_widget_settings_link($links) {
     if(sb_tab_widget_check_core()) {
