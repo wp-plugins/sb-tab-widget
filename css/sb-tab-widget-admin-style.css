@@ -1,0 +1,35 @@
+.sb-theme-sidebar ul.sb-sortable-list {
+    border: medium none;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.sb-option .sb-theme-sidebar .sb-sortable-list li {
+    padding-left: 50px;
+}
+
+.sb-sidebar-group li .sb-icon-delete {
+    left: 25px;
+}
+
+.sb-sidebar-group li .sb-icon-drag {
+    left: 5px;
+}
+
+.sb-sidebar-group li .sb-icon-delete,
+.sb-sidebar-group li .sb-icon-drag {
+    top: 18px;
+}
+
+.sb-option .sb-theme-sidebar .sb-sidebar-line > input {
+    width: 45%;
+}
+
+.sb-option .sb-theme-sidebar .sb-sidebar-line > input:last-child {
+    width: 21%;
+}
+
+.sb-option .sb-theme-sidebar .sb-sidebar-line > input:first-child {
+    width: 30%;
+}
