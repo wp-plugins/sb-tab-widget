@@ -4,11 +4,15 @@ Plugin Name: SB Tab Widget
 Plugin URI: http://hocwp.net/
 Description: SB Tab Widget is a plugin that allows to display widget on tabber.
 Author: SB Team
-Version: 1.0.5
+Version: 1.0.6
 Author URI: http://hocwp.net/
 Text Domain: sb-tab-widget
 Domain Path: /languages/
 */
+
+if(defined('SB_THEME_VERSION') && version_compare(SB_THEME_VERSION, '1.7.0', '>=')) {
+    return;
+}
 
 define('SB_TAB_WIDGET_FILE', __FILE__);
 
